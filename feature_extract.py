@@ -16,7 +16,7 @@ class Room(object):
         self.intype_index = intype_index
     
     @property
-    def feature_area_sqrt(self):
+    def feature_area(self):
         return int(sqrt(abs(self.polygon.area)))
         
     @property
@@ -59,7 +59,7 @@ class Room(object):
         
         
     def extract(self):
-        featurename = ['feature_area_sqrt','num_of_reflex_angle','num_of_sides','feature_sides_variance','room_type','intype_index','tag']
+        featurename = ['feature_area', 'feature_perimeter' ,'num_of_reflex_angle','num_of_sides','feature_sides_variance','room_type','intype_index','tag']
         features = []
         for each in featurename:
             features.append(getattr(self ,each))

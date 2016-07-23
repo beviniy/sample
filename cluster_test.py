@@ -105,12 +105,12 @@ def train(room_type, refresh = False):
     if refresh or (not os.path.exists(outpath%room_type)):
         print 'get feature for %s' % room_type
         get_feature(fout = outpath, room_type = room_type)
-
+    return
     f = open(outpath % room_type)
     features = pickle.load(f)
     f.close()
     if len(features)>10:
-        feature_fit(features[:,:4], features[:,-3:])
+        feature_fit(features[:,:5], features[:,-3:])
     else:
         print u'样本太少,%s:%s' %(room_type,len(features))
 
