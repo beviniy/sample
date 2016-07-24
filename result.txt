@@ -1,0 +1,372 @@
+----------------
+0
+name:Nearest Neighbors	score:0.493617021277
+name:Linear SVM	score:0.393617021277
+name:RBF SVM	score:0.517021276596
+name:Decision Tree	score:0.51914893617
+name:Random Forest	score:0.536170212766
+name:AdaBoost	score:0.451063829787
+name:Naive Bayes	score:0.525531914894
+name:Linear Discriminant Analysis	score:0.478723404255
+name:Quadratic Discriminant Analysis	score:0.525531914894
+----------------
+----------------
+1
+name:Nearest Neighbors	score:0.523404255319
+name:Linear SVM	score:0.393617021277
+name:RBF SVM	score:0.523404255319
+name:Decision Tree	score:0.531914893617
+name:Random Forest	score:0.551063829787
+name:AdaBoost	score:0.329787234043
+name:Naive Bayes	score:0.506382978723
+name:Linear Discriminant Analysis	score:0.427659574468
+name:Quadratic Discriminant Analysis	score:0.506382978723
+----------------
+----------------
+2
+name:Nearest Neighbors	score:0.170212765957
+name:Linear SVM	score:0.270212765957
+name:RBF SVM	score:0.302127659574
+name:Decision Tree	score:0.302127659574
+name:Random Forest	score:0.312765957447
+name:AdaBoost	score:0.285106382979
+name:Naive Bayes	score:0.165957446809
+name:Linear Discriminant Analysis	score:0.302127659574
+name:Quadratic Discriminant Analysis	score:0.165957446809
+----------------
+----------------
+3
+name:Nearest Neighbors	score:0.302127659574
+name:Linear SVM	score:0.291489361702
+name:RBF SVM	score:0.3
+name:Decision Tree	score:0.3
+name:Random Forest	score:0.3
+name:AdaBoost	score:0.253191489362
+name:Naive Bayes	score:0.176595744681
+name:Linear Discriminant Analysis	score:0.295744680851
+name:Quadratic Discriminant Analysis	score:0.176595744681
+----------------
+----------------
+4
+name:Nearest Neighbors	score:0.374468085106
+name:Linear SVM	score:0.334042553191
+name:RBF SVM	score:0.344680851064
+name:Decision Tree	score:0.344680851064
+name:Random Forest	score:0.33829787234
+name:AdaBoost	score:0.285106382979
+name:Naive Bayes	score:0.282978723404
+name:Linear Discriminant Analysis	score:0.331914893617
+name:Quadratic Discriminant Analysis	score:0.282978723404
+----------------
+----------------
+0	1
+name:Nearest Neighbors	score:0.570212765957
+name:Linear SVM	score:0.440425531915
+name:RBF SVM	score:0.514893617021
+name:Decision Tree	score:0.548936170213
+name:Random Forest	score:0.570212765957
+name:AdaBoost	score:0.457446808511
+name:Naive Bayes	score:0.495744680851
+name:Linear Discriminant Analysis	score:0.502127659574
+name:Quadratic Discriminant Analysis	score:0.517021276596
+----------------
+----------------
+0	2
+name:Nearest Neighbors	score:0.514893617021
+name:Linear SVM	score:0.372340425532
+name:RBF SVM	score:0.506382978723
+name:Decision Tree	score:0.542553191489
+name:Random Forest	score:0.534042553191
+name:AdaBoost	score:0.425531914894
+name:Naive Bayes	score:0.314893617021
+name:Linear Discriminant Analysis	score:0.448936170213
+name:Quadratic Discriminant Analysis	score:0.223404255319
+----------------
+----------------
+0	3
+name:Nearest Neighbors	score:0.559574468085
+name:Linear SVM	score:0.410638297872
+name:RBF SVM	score:0.53829787234
+name:Decision Tree	score:0.551063829787
+name:Random Forest	score:0.553191489362
+name:AdaBoost	score:0.306382978723
+name:Naive Bayes	score:0.397872340426
+name:Linear Discriminant Analysis	score:0.468085106383
+name:Quadratic Discriminant Analysis	score:0.265957446809
+----------------
+----------------
+0	4
+name:Nearest Neighbors	score:0.568085106383
+name:Linear SVM	score:0.425531914894
+name:RBF SVM	score:0.565957446809
+name:Decision Tree	score:0.570212765957
+name:Random Forest	score:0.593617021277
+name:AdaBoost	score:0.402127659574
+name:Naive Bayes	score:0.482978723404
+name:Linear Discriminant Analysis	score:0.487234042553
+name:Quadratic Discriminant Analysis	score:0.497872340426
+----------------
+----------------
+1	2
+name:Nearest Neighbors	score:0.53829787234
+name:Linear SVM	score:0.385106382979
+name:RBF SVM	score:0.531914893617
+name:Decision Tree	score:0.510638297872
+name:Random Forest	score:0.544680851064
+name:AdaBoost	score:0.387234042553
+name:Naive Bayes	score:0.297872340426
+name:Linear Discriminant Analysis	score:0.453191489362
+name:Quadratic Discriminant Analysis	score:0.223404255319
+----------------
+----------------
+1	3
+name:Nearest Neighbors	score:0.544680851064
+name:Linear SVM	score:0.385106382979
+name:RBF SVM	score:0.525531914894
+name:Decision Tree	score:0.525531914894
+name:Random Forest	score:0.536170212766
+name:AdaBoost	score:0.485106382979
+name:Naive Bayes	score:0.270212765957
+name:Linear Discriminant Analysis	score:0.436170212766
+name:Quadratic Discriminant Analysis	score:0.208510638298
+----------------
+----------------
+1	4
+name:Nearest Neighbors	score:0.527659574468
+name:Linear SVM	score:0.38085106383
+name:RBF SVM	score:0.546808510638
+name:Decision Tree	score:0.544680851064
+name:Random Forest	score:0.582978723404
+name:AdaBoost	score:0.265957446809
+name:Naive Bayes	score:0.502127659574
+name:Linear Discriminant Analysis	score:0.41914893617
+name:Quadratic Discriminant Analysis	score:0.506382978723
+----------------
+----------------
+2	3
+name:Nearest Neighbors	score:0.293617021277
+name:Linear SVM	score:0.293617021277
+name:RBF SVM	score:0.331914893617
+name:Decision Tree	score:0.325531914894
+name:Random Forest	score:0.331914893617
+name:AdaBoost	score:0.242553191489
+name:Naive Bayes	score:0.193617021277
+name:Linear Discriminant Analysis	score:0.302127659574
+name:Quadratic Discriminant Analysis	score:0.0723404255319
+----------------
+----------------
+2	4
+name:Nearest Neighbors	score:0.406382978723
+name:Linear SVM	score:0.382978723404
+name:RBF SVM	score:0.402127659574
+name:Decision Tree	score:0.427659574468
+name:Random Forest	score:0.440425531915
+name:AdaBoost	score:0.276595744681
+name:Naive Bayes	score:0.26170212766
+name:Linear Discriminant Analysis	score:0.376595744681
+name:Quadratic Discriminant Analysis	score:0.229787234043
+----------------
+----------------
+3	4
+name:Nearest Neighbors	score:0.41914893617
+name:Linear SVM	score:0.359574468085
+name:RBF SVM	score:0.414893617021
+name:Decision Tree	score:0.404255319149
+name:Random Forest	score:0.412765957447
+name:AdaBoost	score:0.157446808511
+name:Naive Bayes	score:0.268085106383
+name:Linear Discriminant Analysis	score:0.359574468085
+name:Quadratic Discriminant Analysis	score:0.214893617021
+----------------
+----------------
+0	1	2
+name:Nearest Neighbors	score:0.508510638298
+name:Linear SVM	score:0.427659574468
+name:RBF SVM	score:0.508510638298
+name:Decision Tree	score:0.482978723404
+name:Random Forest	score:0.508510638298
+name:AdaBoost	score:0.436170212766
+name:Naive Bayes	score:0.414893617021
+name:Linear Discriminant Analysis	score:0.482978723404
+name:Quadratic Discriminant Analysis	score:0.297872340426
+----------------
+----------------
+0	1	3
+name:Nearest Neighbors	score:0.568085106383
+name:Linear SVM	score:0.436170212766
+name:RBF SVM	score:0.555319148936
+name:Decision Tree	score:0.53829787234
+name:Random Forest	score:0.578723404255
+name:AdaBoost	score:0.351063829787
+name:Naive Bayes	score:0.397872340426
+name:Linear Discriminant Analysis	score:0.489361702128
+name:Quadratic Discriminant Analysis	score:0.217021276596
+----------------
+----------------
+0	1	4
+name:Nearest Neighbors	score:0.531914893617
+name:Linear SVM	score:0.421276595745
+name:RBF SVM	score:0.555319148936
+name:Decision Tree	score:0.529787234043
+name:Random Forest	score:0.587234042553
+name:AdaBoost	score:0.417021276596
+name:Naive Bayes	score:0.508510638298
+name:Linear Discriminant Analysis	score:0.497872340426
+name:Quadratic Discriminant Analysis	score:0.463829787234
+----------------
+----------------
+0	2	3
+name:Nearest Neighbors	score:0.540425531915
+name:Linear SVM	score:0.374468085106
+name:RBF SVM	score:0.517021276596
+name:Decision Tree	score:0.502127659574
+name:Random Forest	score:0.491489361702
+name:AdaBoost	score:0.295744680851
+name:Naive Bayes	score:0.240425531915
+name:Linear Discriminant Analysis	score:0.457446808511
+name:Quadratic Discriminant Analysis	score:0.131914893617
+----------------
+----------------
+0	2	4
+name:Nearest Neighbors	score:0.587234042553
+name:Linear SVM	score:0.442553191489
+name:RBF SVM	score:0.6
+name:Decision Tree	score:0.58085106383
+name:Random Forest	score:0.621276595745
+name:AdaBoost	score:0.242553191489
+name:Naive Bayes	score:0.306382978723
+name:Linear Discriminant Analysis	score:0.510638297872
+name:Quadratic Discriminant Analysis	score:0.225531914894
+----------------
+----------------
+0	3	4
+name:Nearest Neighbors	score:0.563829787234
+name:Linear SVM	score:0.408510638298
+name:RBF SVM	score:0.570212765957
+name:Decision Tree	score:0.559574468085
+name:Random Forest	score:0.557446808511
+name:AdaBoost	score:0.429787234043
+name:Naive Bayes	score:0.334042553191
+name:Linear Discriminant Analysis	score:0.497872340426
+name:Quadratic Discriminant Analysis	score:0.259574468085
+----------------
+----------------
+1	2	3
+name:Nearest Neighbors	score:0.568085106383
+name:Linear SVM	score:0.393617021277
+name:RBF SVM	score:0.56170212766
+name:Decision Tree	score:0.557446808511
+name:Random Forest	score:0.568085106383
+name:AdaBoost	score:0.342553191489
+name:Naive Bayes	score:0.208510638298
+name:Linear Discriminant Analysis	score:0.444680851064
+name:Quadratic Discriminant Analysis	score:0.148936170213
+----------------
+----------------
+1	2	4
+name:Nearest Neighbors	score:0.557446808511
+name:Linear SVM	score:0.406382978723
+name:RBF SVM	score:0.608510638298
+name:Decision Tree	score:0.58085106383
+name:Random Forest	score:0.58085106383
+name:AdaBoost	score:0.310638297872
+name:Naive Bayes	score:0.336170212766
+name:Linear Discriminant Analysis	score:0.482978723404
+name:Quadratic Discriminant Analysis	score:0.234042553191
+----------------
+----------------
+1	3	4
+name:Nearest Neighbors	score:0.551063829787
+name:Linear SVM	score:0.368085106383
+name:RBF SVM	score:0.572340425532
+name:Decision Tree	score:0.514893617021
+name:Random Forest	score:0.544680851064
+name:AdaBoost	score:0.295744680851
+name:Naive Bayes	score:0.370212765957
+name:Linear Discriminant Analysis	score:0.459574468085
+name:Quadratic Discriminant Analysis	score:0.289361702128
+----------------
+----------------
+2	3	4
+name:Nearest Neighbors	score:0.436170212766
+name:Linear SVM	score:0.374468085106
+name:RBF SVM	score:0.423404255319
+name:Decision Tree	score:0.391489361702
+name:Random Forest	score:0.412765957447
+name:AdaBoost	score:0.282978723404
+name:Naive Bayes	score:0.204255319149
+name:Linear Discriminant Analysis	score:0.372340425532
+name:Quadratic Discriminant Analysis	score:0.0617021276596
+----------------
+----------------
+0	1	2	3
+name:Nearest Neighbors	score:0.576595744681
+name:Linear SVM	score:0.434042553191
+name:RBF SVM	score:0.58085106383
+name:Decision Tree	score:0.568085106383
+name:Random Forest	score:0.568085106383
+name:AdaBoost	score:0.474468085106
+name:Naive Bayes	score:0.310638297872
+name:Linear Discriminant Analysis	score:0.525531914894
+name:Quadratic Discriminant Analysis	score:0.221276595745
+----------------
+----------------
+0	1	2	4
+name:Nearest Neighbors	score:0.56170212766
+name:Linear SVM	score:0.421276595745
+name:RBF SVM	score:0.617021276596
+name:Decision Tree	score:0.578723404255
+name:Random Forest	score:0.625531914894
+name:AdaBoost	score:0.463829787234
+name:Naive Bayes	score:0.4
+name:Linear Discriminant Analysis	score:0.512765957447
+name:Quadratic Discriminant Analysis	score:0.268085106383
+----------------
+----------------
+0	1	3	4
+name:Nearest Neighbors	score:0.527659574468
+name:Linear SVM	score:0.46170212766
+name:RBF SVM	score:0.565957446809
+name:Decision Tree	score:0.536170212766
+name:Random Forest	score:0.563829787234
+name:AdaBoost	score:0.474468085106
+name:Naive Bayes	score:0.429787234043
+name:Linear Discriminant Analysis	score:0.502127659574
+name:Quadratic Discriminant Analysis	score:0.287234042553
+----------------
+----------------
+0	2	3	4
+name:Nearest Neighbors	score:0.527659574468
+name:Linear SVM	score:0.404255319149
+name:RBF SVM	score:0.557446808511
+name:Decision Tree	score:0.534042553191
+name:Random Forest	score:0.553191489362
+name:AdaBoost	score:0.382978723404
+name:Naive Bayes	score:0.259574468085
+name:Linear Discriminant Analysis	score:0.46170212766
+name:Quadratic Discriminant Analysis	score:0.0446808510638
+----------------
+----------------
+1	2	3	4
+name:Nearest Neighbors	score:0.555319148936
+name:Linear SVM	score:0.393617021277
+name:RBF SVM	score:0.555319148936
+name:Decision Tree	score:0.563829787234
+name:Random Forest	score:0.559574468085
+name:AdaBoost	score:0.302127659574
+name:Naive Bayes	score:0.236170212766
+name:Linear Discriminant Analysis	score:0.453191489362
+name:Quadratic Discriminant Analysis	score:0.168085106383
+----------------
+----------------
+0	1	2	3	4
+name:Nearest Neighbors	score:0.568085106383
+name:Linear SVM	score:0.402127659574
+name:RBF SVM	score:0.617021276596
+name:Decision Tree	score:0.578723404255
+name:Random Forest	score:0.593617021277
+name:AdaBoost	score:0.431914893617
+name:Naive Bayes	score:0.344680851064
+name:Linear Discriminant Analysis	score:0.53829787234
+name:Quadratic Discriminant Analysis	score:0.365957446809
+----------------
