@@ -9,6 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from sklearn.cluster import KMeans
+from sklearn.preprocessing import StandardScaler
 import shutil
 import os
 import random
@@ -37,12 +38,13 @@ def colormap(nums):
 
 
 def feature_fit(features, info):
-    features = feature_filter(features)
+    #features = feature_filter(features)
     X = np.array(features)
+    X = StandardScaler().fit_transform(X)
     random_state = 170
-    pre_y = KMeans(n_clusters=100, random_state=random_state).fit_predict(X)
-    #classification(pre_y, info)
-    #return
+    pre_y = KMeans(n_clusters=500, random_state=random_state).fit_predict(X)
+    classification(pre_y, info)
+    return
     fig = plt.figure(figsize=(12, 9))
     ax = fig.gca(projection='3d')
 
@@ -105,10 +107,10 @@ def train(room_type, refresh = False):
     if refresh or (not os.path.exists(outpath%room_type)):
         print 'get feature for %s' % room_type
         get_feature(fout = outpath, room_type = room_type)
-    return
     f = open(outpath % room_type)
     features = pickle.load(f)
     f.close()
+    print len(features)
     if len(features)>10:
         feature_fit(features[:,:5], features[:,-3:])
     else:
@@ -120,4 +122,4 @@ if __name__ == '__main__':
     #    print each
     #    train(each, 1)
     #train(3)
-    train('all',1)
+    train('all',0)

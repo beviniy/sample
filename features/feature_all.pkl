@@ -8,8 +8,8 @@ p2
 tS'b'
 tRp3
 (I1
-(I1587
-I8
+(L1587L
+L8L
 tcnumpy
 dtype
 p4

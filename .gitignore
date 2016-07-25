@@ -9,7 +9,7 @@ __pycache__/
 */.DS_STORE
 # C extensions
 *.so
-
+.spyderworkspace
 # Distribution / packaging
 .Python
 env/

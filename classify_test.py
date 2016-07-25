@@ -31,7 +31,7 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 
-out = open('result2.txt', 'w')
+out = open('result3.txt', 'w')
 #out = sys.stdout
 
 names = ["Nearest Neighbors", "Linear SVM", "RBF SVM", "Decision Tree",
@@ -54,16 +54,16 @@ used_type = [1,2,3,4, 5 ,6, 7,8,10,12]
 
 def get_data(features_index,intype='all'):
     path = 'features/feature_%s.pkl'
-    
+
     f= open(path % intype)
     features = pickle.load(f)
     f.close()
-    
+
     features = np.array([each for each in features if each[5] in used_type])
     #index = np.where(features[:,4].all() in used_type)
-    
+
     return features[:,features_index], features[:,-3]
-    
+
 
 def train(features_index):
     X, y = get_data(features_index)
@@ -73,7 +73,7 @@ def train(features_index):
     X = StandardScaler().fit_transform(X)
 
     X_train, X_test, y_train, y_test = train_test_split(X, y,  test_size=.1)
-    '''    
+    '''
     from collections import Counter
     print Counter(y_train)
     print Counter(y_test)
@@ -139,11 +139,13 @@ def feature_train(room_type,features, refresh = False):
 if __name__ == '__main__':
     n_features = 5
     index = range(n_features)
-    for each in index:
+    for each in [4]:
         for each_sub in itertools.combinations(index,each+1):
             out.write('----------------\n')
             out.write('%s\n' %'\t'.join((str(i) for i in each_sub)))
             train(each_sub)
             out.write('----------------\n')
-    out.close()
-    
+
+
+
+out.close()

@@ -25,8 +25,5 @@ def feature_counter(filepath = 'features/'):
 
 
 
-
-
-
 if __name__ == '__main__':
     feature_counter()
