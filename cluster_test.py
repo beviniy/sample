@@ -9,7 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from sklearn.cluster import KMeans
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler,  MinMaxScaler
 import shutil
 import os
 import random
@@ -40,9 +40,12 @@ def colormap(nums):
 def feature_fit(features, info):
     #features = feature_filter(features)
     X = np.array(features)
-    X = StandardScaler().fit_transform(X)
+    X = MinMaxScaler((0,100)).fit_transform(X)
+    
+    X = feature_filter(X)
+    #X = StandardScaler().fit_transform(X)
     random_state = 170
-    pre_y = KMeans(n_clusters=100, random_state=random_state).fit_predict(X)
+    pre_y = KMeans(n_clusters=50, random_state=random_state).fit_predict(X)
     classification(pre_y, info)
     return
     fig = plt.figure(figsize=(12, 9))
@@ -65,6 +68,11 @@ def feature_fit(features, info):
 
 
 def feature_filter(features):
+    
+    features[:,1] *= 0.01
+    features[:,0] *= 0.01
+    return features
+    '''
     diff = lambda a,i:max(a[:,i]) - min(a[:,i])
     for each in range(features.shape[1]):
         features[:,each] = (features[:,each]-min(features[:,each]))/diff(features,each) * 100
@@ -72,6 +80,7 @@ def feature_filter(features):
     #features[:,1] = features[:,1] * 10000
     return features
 
+    '''
 
 
 def get_feature(fname = 'taged_sample.pkl',fout = 'features/feature_%s.pkl',room_type='all'):

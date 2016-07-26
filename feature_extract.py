@@ -69,14 +69,14 @@ class Room(object):
                 if angle > pi:
                     self.reflex_sides.append([side for side in self.polygon.sides if point in side.points])
             self.reflex_sides = set(reduce(operator.add, self.reflex_sides))
-    
-    
+
+
     @property
     def reflex_sides_average_len(self):
         if self.num_of_reflex_angle == 0:
             return 0
         self._calc_reflex_sides()
-        
+
         average = sum([side.length for side in self.reflex_sides])/len(self.reflex_sides)
         self._reflex_sides_mean = average
         return int(round(average))
@@ -87,17 +87,17 @@ class Room(object):
         if self.num_of_reflex_angle == 0:
             return 0
         self._calc_reflex_sides()
-        
+
         if self._reflex_sides_mean != 0:
             mean_value = self._reflex_sides_mean
         else:
             mean_value = self.reflex_sides_average_len
-        
+
         total = 0
         #print self.reflex_sides
         for side in self.reflex_sides:
             total += (side.length - mean_value) ** 2
-        #total 
+        #total
         variance = total/len(self.reflex_sides)
         return int(round(variance))
 
