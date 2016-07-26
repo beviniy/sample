@@ -26,7 +26,7 @@ def classification(pre_y, info):
     for each in set(pre_y):
         if not os.path.exists(basedir%each):
             os.mkdir(basedir%each)
-    for i,each in enumerate(pre_y):
+    for i, each in enumerate(pre_y):
         shutil.copy(source% func(info[i]), basedir%each)
 
 
@@ -42,7 +42,7 @@ def feature_fit(features, info):
     X = np.array(features)
     X = StandardScaler().fit_transform(X)
     random_state = 170
-    pre_y = KMeans(n_clusters=500, random_state=random_state).fit_predict(X)
+    pre_y = KMeans(n_clusters=100, random_state=random_state).fit_predict(X)
     classification(pre_y, info)
     return
     fig = plt.figure(figsize=(12, 9))
@@ -103,13 +103,17 @@ def get_feature(fname = 'taged_sample.pkl',fout = 'features/feature_%s.pkl',room
     f.close()
 
 def train(room_type, refresh = False):
+    
     outpath = 'features/feature_%s.pkl'
     if refresh or (not os.path.exists(outpath%room_type)):
         print 'get feature for %s' % room_type
         get_feature(fout = outpath, room_type = room_type)
+        
+    #return
     f = open(outpath % room_type)
     features = pickle.load(f)
     f.close()
+    
     print len(features)
     if len(features)>10:
         feature_fit(features[:,:5], features[:,-3:])

@@ -23,8 +23,8 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 
-#out = open('result3.txt', 'w')
-out = sys.stdout
+out = open('result7.txt', 'w')
+#out = sys.stdout
 
 names = ["Nearest Neighbors", "Linear SVM", "RBF SVM", "Decision Tree",
          "Random Forest", "AdaBoost", "Naive Bayes", "Linear Discriminant Analysis",
@@ -52,7 +52,7 @@ def get_data(features_index,intype='all'):
     features = pickle.load(f)
     f.close()
 
-    features = np.array([each for each in features if each[5] in used_type])
+    features = np.array([each for each in features if each[-3] in used_type])
     #index = np.where(features[:,4].all() in used_type)
 
     return features[:,features_index], features[:,-3]
@@ -65,7 +65,7 @@ def train(features_index):
     #X = scaler.transform(X)
     X = StandardScaler().fit_transform(X)
 
-    X_train, X_test, y_train, y_test = train_test_split(X, y,  test_size=.1)
+    X_train, X_test, y_train, y_test = train_test_split(X, y,  test_size=.4)
     '''
     from collections import Counter
     print Counter(y_train)
@@ -84,53 +84,11 @@ def train(features_index):
         score = clf.score(X_test, y_test)
         out.write('name:%s\tscore:%s\n' % (name,score))
     pass
-'''
-def get_feature(fname = 'taged_sample.pkl',fout = 'features/feature_%s.pkl',room_type='all'):
-
-    f = open(fname,'rb')
-    rooms = pickle.load(f)
-    f.close()
-    features = []
-
-    for i,room in enumerate(rooms):
-        #if len(room['points']) <4:
-        #    print room['points']
-        #    continue
-        if room_type == 'all' or room_type == room['room_type']:
-            roomp = Room(room['room_type'],room['intype_index'],room['tag'],*room['room_points'])
-            features.append(roomp.extract())
-        #print i,
-
-    features = np.array(features, dtype='float')
-    if not len(features):
-        print '样本数为0'
-    #else:
-    #x,y,z = zip(*features)
-    #    diff = lambda a,i:max(a[:,i]) - min(a[:,i])
-    #    print diff(features,0),diff(features,1),diff(features,2)
-    #return features
-    f = open(fout % room_type ,'wb')
-    pickle.dump(features,f)
-    f.close()
 
 
-def feature_train(room_type,features, refresh = False):
-    outpath = 'features/feature_%s.pkl'
-    if refresh or (not os.path.exists(outpath%room_type)):
-        print 'get feature for %s' % room_type
-        get_feature(fout = outpath, room_type = room_type)
-    return
-    #f = open(outpath % room_type)
-    #features = pickle.load(f)
-    #f.close()
-    #if len(features)>10:
-    #    feature_fit(features[:,:5], features[:,-3:])
-    #else:
-    #    print u'样本太少,%s:%s' %(room_type,len(features))
-'''
 
 if __name__ == '__main__':
-    n_features = 5
+    n_features = 7
     index = range(n_features)
     for each in index:
         for each_sub in itertools.combinations(index,each+1):

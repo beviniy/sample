@@ -4,7 +4,7 @@ import cPickle as pickle
 import json
 #from sympy.geometry import Point,Polygon
 from sympy import Point, Polygon, sqrt, pi
-import itertools
+import operator
 
 class Room(object):
 
@@ -15,6 +15,7 @@ class Room(object):
         self.tag = room_tag
         self.intype_index = intype_index
         self.reflex_sides = []
+        self._reflex_sides_mean = 0
 
     @property
     def feature_area(self):
@@ -48,7 +49,7 @@ class Room(object):
         total = 0
         for side_len in sides_length:
             total += (side_len - mean_value) ** 2
-        return int(round(sqrt(total/len(sides_length))))
+        return int(round(total/len(sides_length)))
 
     @property
     def num_of_sides(self):
@@ -66,8 +67,8 @@ class Room(object):
         if not self.reflex_sides:
             for point, angle in self.polygon.angles.items():
                 if angle > pi:
-                    self.reflex_sides.append(tuple([side for side in self.polygon.sides if point in side.points]))
-        self.reflex_sides = set(itertools.chain(*self.reflex_sides))
+                    self.reflex_sides.append([side for side in self.polygon.sides if point in side.points])
+            self.reflex_sides = set(reduce(operator.add, self.reflex_sides))
     
     
     @property
@@ -76,18 +77,36 @@ class Room(object):
             return 0
         self._calc_reflex_sides()
         
-            
-        return
+        average = sum([side.length for side in self.reflex_sides])/len(self.reflex_sides)
+        self._reflex_sides_mean = average
+        return int(round(average))
 
 
     @property
     def reflex_sides_average_var(self):
+        if self.num_of_reflex_angle == 0:
+            return 0
         self._calc_reflex_sides()
-        return
+        
+        if self._reflex_sides_mean != 0:
+            mean_value = self._reflex_sides_mean
+        else:
+            mean_value = self.reflex_sides_average_len
+        
+        total = 0
+        #print self.reflex_sides
+        for side in self.reflex_sides:
+            total += (side.length - mean_value) ** 2
+        #total 
+        variance = total/len(self.reflex_sides)
+        return int(round(variance))
 
 
     def extract(self):
-        featurename = ['feature_area', 'feature_perimeter' ,'num_of_reflex_angle','num_of_sides','feature_sides_variance','room_type','intype_index','tag']
+        featurename = ['feature_area', 'feature_perimeter' ,'num_of_reflex_angle',
+                       'num_of_sides','feature_sides_variance',
+                       'reflex_sides_average_len','reflex_sides_average_var',
+                       'room_type','intype_index','tag']
         features = []
         for each in featurename:
             features.append(getattr(self ,each))
@@ -104,7 +123,7 @@ if __name__ == '__main__':
     #    print each
     points = rooms[236]['room_points']
     points = map(Point, points)
-    print points
+    #print points
     pp = Room(rooms[236]['room_type'],rooms[236]['intype_index'],rooms[236]['tag'], *points)
     print pp.feature_area
     print pp.feature_perimeter
@@ -112,5 +131,6 @@ if __name__ == '__main__':
     print pp.num_of_sides
     print pp.num_of_reflex_angle
     print pp.reflex_sides_average_len
-    print pp.reflex_sides
+    print pp.reflex_sides_average_var
+    #print pp.reflex_sides
     print pp.extract()
