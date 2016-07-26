@@ -2,21 +2,13 @@
 
 
 import cPickle as pickle
-#import json
 
-#from feature_extract import Room
-from sklearn.cross_validation import train_test_split
-from sklearn.preprocessing import StandardScaler
 from feature_extract import Room
 import itertools
 import numpy as np
-#import matplotlib.pyplot as plt
-#from mpl_toolkits.mplot3d import Axes3D
-#from sklearn.cluster import KMeans
-#import shutil
+
 import os
 import sys
-#import random
 
 from room_type import ROOM_TYPE_CHOICES
 from sklearn.cross_validation import train_test_split
@@ -31,12 +23,13 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 
-out = open('result3.txt', 'w')
-#out = sys.stdout
+#out = open('result3.txt', 'w')
+out = sys.stdout
 
 names = ["Nearest Neighbors", "Linear SVM", "RBF SVM", "Decision Tree",
          "Random Forest", "AdaBoost", "Naive Bayes", "Linear Discriminant Analysis",
          "Quadratic Discriminant Analysis"]
+         
 classifiers = [
     KNeighborsClassifier(9),
     SVC(kernel="linear", C=0.025),
@@ -139,7 +132,7 @@ def feature_train(room_type,features, refresh = False):
 if __name__ == '__main__':
     n_features = 5
     index = range(n_features)
-    for each in [4]:
+    for each in index:
         for each_sub in itertools.combinations(index,each+1):
             out.write('----------------\n')
             out.write('%s\n' %'\t'.join((str(i) for i in each_sub)))
