@@ -4,7 +4,6 @@ import cPickle as pickle
 import json
 #from sympy.geometry import Point,Polygon
 from sympy import Point, Polygon, sqrt, pi
-import operator
 
 class Room(object):
 
@@ -14,7 +13,7 @@ class Room(object):
         self.room_type = room_type
         self.tag = room_tag
         self.intype_index = intype_index
-        self.reflex_sides = []
+        self.reflex_sides = {}
         self._reflex_sides_mean = 0
 
     @property
@@ -67,8 +66,8 @@ class Room(object):
         if not self.reflex_sides:
             for point, angle in self.polygon.angles.items():
                 if angle > pi:
-                    self.reflex_sides.append([side for side in self.polygon.sides if point in side.points])
-            self.reflex_sides = set(reduce(operator.add, self.reflex_sides))
+                    self.reflex_sides.extend([side for side in self.polygon.sides if point in side.points])
+
 
 
     @property

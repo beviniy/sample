@@ -42,7 +42,7 @@ def feature_fit(features, info):
     X = np.array(features)
     X = MinMaxScaler((0,100)).fit_transform(X)
     
-    X = feature_filter(X)
+    #X = feature_filter(X)
     #X = StandardScaler().fit_transform(X)
     random_state = 170
     pre_y = KMeans(n_clusters=50, random_state=random_state).fit_predict(X)

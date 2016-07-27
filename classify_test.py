@@ -23,7 +23,7 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 
-out = open('result7.txt', 'w')
+out = open('result_11_distance.txt', 'w')
 #out = sys.stdout
 
 names = ["Nearest Neighbors", "Linear SVM", "RBF SVM", "Decision Tree",
@@ -31,7 +31,7 @@ names = ["Nearest Neighbors", "Linear SVM", "RBF SVM", "Decision Tree",
          "Quadratic Discriminant Analysis"]
          
 classifiers = [
-    KNeighborsClassifier(9),
+    KNeighborsClassifier(11, weights='distance'),
     SVC(kernel="linear", C=0.025),
     SVC(gamma=2, C=1),
     DecisionTreeClassifier(max_depth=5),
